@@ -21,11 +21,11 @@
         app:layout_constraintVertical_bias="0.094" />
 
     <TextView
-        android:id="@+id/tv_data_detail_serial"
+        android:id="@+id/tv_data_detail_consecutivo"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:gravity="center"
-        android:text="serial"
+        android:text="consecutivo"
         android:textColor="#FA0218"
         android:textSize="20sp"
         app:layout_constraintBottom_toBottomOf="parent"
@@ -35,30 +35,30 @@
         app:layout_constraintVertical_bias="0.069" />
 
     <TextView
-        android:id="@+id/tv_data_detail_descripcion"
+        android:id="@+id/tv_data_detail_concepto"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:gravity="center"
-        android:text="descripcion"
+        android:text="concepto"
         android:textColor="#FA0218"
         android:textSize="20sp"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/tv_data_detail_serial"
+        app:layout_constraintTop_toBottomOf="@+id/tv_data_detail_consecutivo"
         app:layout_constraintVertical_bias="0.069" />
     <TextView
-        android:id="@+id/tv_data_detail_brand"
+        android:id="@+id/tv_data_detail_marca"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:gravity="center"
-        android:text="brand"
+        android:text="marca"
         android:textColor="#FA0218"
         android:textSize="20sp"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/tv_data_detail_descripcion"
+        app:layout_constraintTop_toBottomOf="@+id/tv_data_detail_concepto"
         app:layout_constraintVertical_bias="0.069" />
 
     <Button

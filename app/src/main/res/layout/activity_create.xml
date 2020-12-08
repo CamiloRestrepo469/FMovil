@@ -27,11 +27,23 @@
         android:id="@+id/fab_create_save"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_gravity="bottom|end"
+        android:layout_gravity="bottom|center"
         android:layout_marginEnd="@dimen/fab_margin"
-        android:layout_marginBottom="145dp"
+        android:layout_margin="@dimen/fab_margin"
         app:maxImageSize="35dp"
         app:srcCompat="@drawable/ic_save_alt_black_18dp" />
+
+<!--    <com.google.android.material.floatingactionbutton.FloatingActionButton-->
+<!--        android:id="@+id/fab_create_update"-->
+<!--        android:layout_width="wrap_content"-->
+<!--        android:layout_height="wrap_content"-->
+<!--        android:layout_gravity="bottom|end"-->
+<!--        android:layout_marginEnd="85dp"-->
+<!--        android:layout_marginBottom="145dp"-->
+<!--        android:backgroundTint="#FFAB40"-->
+<!--        app:maxImageSize="35dp"-->
+<!--        android:onClick="update"-->
+<!--        app:srcCompat="@drawable/ic_update_black_18dp" />-->
 
     <com.google.android.material.floatingactionbutton.FloatingActionButton
         android:id="@+id/fab_create_clear"
@@ -39,7 +51,7 @@
         android:layout_height="wrap_content"
         android:layout_gravity="bottom|end"
         android:layout_marginEnd="@dimen/fab_margin"
-        android:layout_marginBottom="80dp"
+        android:layout_margin="@dimen/fab_margin"
         app:maxImageSize="35dp"
         app:srcCompat="@drawable/ic_cleaning_services_black_18dp" />
 
@@ -47,7 +59,7 @@
         android:id="@+id/fab_create_back"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_gravity="bottom|end"
+        android:layout_gravity="bottom|start"
         android:layout_margin="@dimen/fab_margin"
         app:maxImageSize="35dp"
         app:srcCompat="@drawable/ic_keyboard_backspace_black_18dp" />

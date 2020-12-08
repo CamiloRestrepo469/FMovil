@@ -14,7 +14,7 @@ import com.example.fmovil.models.MovilModels;
 
 public class DataDetailFragment extends Fragment {
 
-    private static String serial, descripcion,brand;
+    private static String consecutivo, concepto,marca;
     private boolean active;
 
     @Override
@@ -29,15 +29,15 @@ public class DataDetailFragment extends Fragment {
     public void onViewCreated(@NonNull View view, Bundle savedInstanceState) {
         super.onViewCreated(view, savedInstanceState);
 
-        TextView tv_data_detail_serial,tv_data_detail_descripcion,tv_data_detail_brand;
+        TextView tv_data_detail_consecutivo,tv_data_detail_concepto,tv_data_detail_marca;
 
-        tv_data_detail_serial=view.findViewById(R.id.tv_data_detail_serial);
-        tv_data_detail_descripcion=view.findViewById(R.id.tv_data_detail_descripcion);
-        tv_data_detail_brand=view.findViewById(R.id.tv_data_detail_brand);
+        tv_data_detail_consecutivo=view.findViewById(R.id.tv_data_detail_consecutivo);
+        tv_data_detail_concepto=view.findViewById(R.id.tv_data_detail_concepto);
+        tv_data_detail_marca=view.findViewById(R.id.tv_data_detail_marca);
 
-        tv_data_detail_serial.setText(serial);
-        tv_data_detail_descripcion.setText(descripcion);
-        tv_data_detail_brand.setText(brand);
+        tv_data_detail_consecutivo.setText(consecutivo);
+        tv_data_detail_concepto.setText(concepto);
+        tv_data_detail_marca.setText(marca);
 
 
         view.findViewById(R.id.button_first).setOnClickListener(new View.OnClickListener() {
@@ -51,9 +51,9 @@ public class DataDetailFragment extends Fragment {
     static void reciveData(Bundle bundle){
         MovilModels models= (MovilModels) bundle.getSerializable("models");
         if(models!=null){
-            serial=models.getSerial();
-            descripcion=models.getDescripcion();
-            brand=models.getBrand();
+            consecutivo=models.getConsecutivo();
+            concepto=models.getConcepto();
+            marca=models.getMarca();
 
         }
     }

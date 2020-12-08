@@ -1,0 +1,112 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:paddingTop="25dp"
+    app:layout_behavior="@string/appbar_scrolling_view_behavior">
+
+
+    <LinearLayout
+        android:id="@+id/ll_registro_consecutivo"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:layout_marginEnd="8dp"
+        android:layout_marginStart="8dp"
+        android:paddingTop="15dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent">
+
+        <TextView
+            android:id="@+id/textView_editar_consecutivo"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_weight="6"
+            android:textSize="20dp"
+            android:textColor="#DA0C0C"
+            android:text="consecutivo *" />
+
+        <EditText
+            android:id="@+id/editText_editar_consecutivo"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_weight="4"
+            android:ems="10"
+            android:textColor="#DA0C0C"
+            android:textSize="16dp"
+            android:inputType="textPersonName"
+            android:hint="Editar el consecutivo" />
+    </LinearLayout>
+
+    <LinearLayout
+        android:id="@+id/ll_registro_marca"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:layout_marginEnd="8dp"
+        android:layout_marginStart="8dp"
+        android:paddingTop="15dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/ll_registro_consecutivo">
+
+        <TextView
+            android:id="@+id/textView_editar_marca"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_weight="6"
+            android:textSize="20dp"
+            android:textColor="#DA0C0C"
+            android:text="marca *" />
+
+        <EditText
+            android:id="@+id/editText_editar_marca"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_weight="4"
+            android:ems="10"
+            android:textColor="#DA0C0C"
+            android:textSize="16dp"
+            android:inputType="textPersonName"
+            android:hint="Editar el Nombre" />
+    </LinearLayout>
+
+    <LinearLayout
+        android:id="@+id/ll_registro_concepto"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:layout_marginEnd="8dp"
+        android:layout_marginStart="8dp"
+        android:paddingTop="15dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/ll_registro_marca">
+
+        <TextView
+            android:id="@+id/textView_editar_concepto"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_weight="6"
+            android:textSize="20dp"
+            android:textColor="#DA0C0C"
+            android:text="concepto *" />
+
+        <EditText
+            android:id="@+id/editText_editar_concepto"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_weight="4"
+            android:ems="10"
+            android:textColor="#DA0C0C"
+            android:textSize="16dp"
+            android:inputType="number"
+            android:hint="Digite la concepto" />
+    </LinearLayout>
+
+
+
+
+</androidx.constraintlayout.widget.ConstraintLayout>

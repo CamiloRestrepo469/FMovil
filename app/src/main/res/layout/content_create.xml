@@ -9,18 +9,18 @@
     app:layout_behavior="@string/appbar_scrolling_view_behavior">
 
     <EditText
-        android:id="@+id/et_create_descripcion"
+        android:id="@+id/et_create_concepto"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_marginTop="5dp"
         android:ems="10"
         android:textColor="#EA0C0C"
-        android:hint="Inserte la descripcion"
+        android:hint="Inserte la concepto"
         android:inputType="textPersonName"
         app:layout_constraintEnd_toEndOf="parent"
         android:gravity="center"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/et_create_brand" />
+        app:layout_constraintTop_toBottomOf="@+id/et_create_marca" />
 
     <TextView
         android:id="@+id/tv_create_title"
@@ -58,13 +58,13 @@
         app:srcCompat="@drawable/ic_mobile_friendly_black_18dp" />
 
     <EditText
-        android:id="@+id/et_create_serial"
+        android:id="@+id/et_create_consecutivo"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_marginTop="15dp"
         android:ems="10"
         android:textColor="#EA0C0C"
-        android:hint="Inserte el serial"
+        android:hint="Inserte el consecutivo"
         android:inputType="textPersonName"
         app:layout_constraintEnd_toEndOf="parent"
         android:gravity="center"
@@ -72,7 +72,7 @@
         app:layout_constraintTop_toBottomOf="@+id/tv_create_img_movil" />
 
     <EditText
-        android:id="@+id/et_create_brand"
+        android:id="@+id/et_create_marca"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_marginTop="5dp"
@@ -83,5 +83,5 @@
         app:layout_constraintEnd_toEndOf="parent"
         android:gravity="center"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/et_create_serial" />
+        app:layout_constraintTop_toBottomOf="@+id/et_create_consecutivo" />
 </androidx.constraintlayout.widget.ConstraintLayout>

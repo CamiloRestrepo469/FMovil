@@ -7,7 +7,7 @@ import com.google.firebase.storage.StorageReference;
 
 public class firebaseConection {
     private static FirebaseAuth mAuth;
-//    private static StorageReference mStorageRef;
+    //    private static StorageReference mStorageRef;
     private static FirebaseFirestore db;
 
     private static FirebaseStorage mFirebaseStorage;

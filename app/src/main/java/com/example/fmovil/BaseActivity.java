@@ -75,12 +75,13 @@ public class BaseActivity extends AppCompatActivity {
     }protected void goToCrate(){
         Intent intent = new Intent(this,CreateActivity.class);
         startActivity(intent);
-    }protected void goToEdit(){
-        Intent intent = new Intent(this,BaseActivity.class);
+    }protected void goToEdit(MovilModels models){
+        Intent intent = new Intent(this,EditarActivity.class);
+        intent.putExtra("models",models);
         startActivity(intent);
     }
     protected void goToSearch(){
-        Intent intent = new Intent(this,BaseActivity.class);
+        Intent intent = new Intent(this,MainActivity.class);
         startActivity(intent);
     }
     protected void goToDetail(MovilModels models){

@@ -42,12 +42,18 @@ public class MovilAdapter extends BaseAdapter {
             LayoutInflater layoutInflater = LayoutInflater.from(this.context);
             view=layoutInflater.inflate(R.layout.movil_list_item,viewGroup,false);
         }
-        TextView tv_movil_list_item_description = view.findViewById(R.id.tv_movil_list_item_description);
-        TextView tv_movil_list_item_serial = view.findViewById(R.id.tv_movil_list_item_serial);
 
-        tv_movil_list_item_description.setText(getItem(i).getDescripcion());
-        tv_movil_list_item_serial.setText(getItem(i).getSerial());
+        TextView tv_movil_list_item_consectivo = view.findViewById(R.id.tv_movil_list_item_consectivo);
+        TextView tv_movil_list_item_concepto = view.findViewById(R.id.tv_movil_list_item_concepto);
+        TextView tv_movil_list_item_marca = view.findViewById(R.id.tv_movil_list_item_marca);
+
+        tv_movil_list_item_concepto.setText(getItem(i).getConcepto());
+        tv_movil_list_item_consectivo.setText(getItem(i).getConsecutivo());
+        tv_movil_list_item_marca.setText(getItem(i).getMarca());
 
         return view;
+
+
+
     }
 }
