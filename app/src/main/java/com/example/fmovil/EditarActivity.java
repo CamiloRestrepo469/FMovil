@@ -101,30 +101,52 @@ public class EditarActivity extends BaseActivity {
             @Override
             public void onClick(View view) {
 
+                DocumentReference washingtonRef = db.collection(COLLECTION_NAME).document(String.valueOf(models));
 
-                documentReference = db.collection(COLLECTION_NAME).document();
-               maleSimpleAlertDialog("Actualizar","ya se esta actualizando  ");
-                documentReference.set(models)
+                washingtonRef
+                        .update("models", true)
                         .addOnSuccessListener(new OnSuccessListener<Void>() {
                             @Override
                             public void onSuccess(Void aVoid) {
-                                models.setConcepto(models.getConcepto());
-                                models.setMarca(models.getMarca());
-                                models.setConsecutivo(models.getConsecutivo());
-                                if(models != null){
-                                    editText_editar_concepto.getText().toString();
-                                    editText_editar_marca.getText().toString();
-                                    editText_editar_consecutivo.getText().toString();
-                                                    }
-                                Log.d(TAG, "ya se esta actualizando!");
-                                        }
+                                Log.d(TAG, "ya!");
+                            }
+                        })
+                        .addOnFailureListener(new OnFailureListener() {
+                            @Override
+                            public void onFailure(@NonNull Exception e) {
+                                Log.w(TAG, "Error ni cl", e);
+                            }
+                        });
 
-                        }).addOnFailureListener(new OnFailureListener() {
-                @Override
-                public void onFailure(@NonNull Exception e) {
-                    Log.w(TAG, "Error no se pudo actualizar", e);
-                }
-            });
+//                documentReference = db.collection(COLLECTION_NAME).document(String.valueOf(models));
+//               maleSimpleAlertDialog("Actualizar","ya se esta actualizando  ");
+//                documentReference.set(models)
+//                        .addOnSuccessListener(new OnSuccessListener<Void>() {
+//                            @Override
+//                            public void onSuccess(Void aVoid)
+//                            {
+//
+//                                Log.d(TAG, "ya se esta actualizando ......!");
+//                                    models.setConcepto(models.getConcepto());
+//                                    models.setMarca(models.getMarca());
+//                                    models.setConsecutivo(models.getConsecutivo());
+//                                        if(models != null){
+//                                        editText_editar_concepto.getText().toString();
+//                                        editText_editar_marca.getText().toString();
+//                                        editText_editar_consecutivo.getText().toString();
+//                                    }
+//                                }
+//
+//
+//
+//
+//                        }
+//                       ).addOnFailureListener(new OnFailureListener() {
+//                @Override
+//                public void onFailure(@NonNull Exception e) {
+//                    Log.w(TAG, "Error no se pudo actualizar******", e);
+//                }
+//            });
 
             }
         });
