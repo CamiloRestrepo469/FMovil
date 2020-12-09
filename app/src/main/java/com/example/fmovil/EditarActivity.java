@@ -126,7 +126,11 @@ public class EditarActivity extends BaseActivity {
                                 editText_editar_consecutivo.setText(models.getConsecutivo());
                                 editText_editar_marca.setText(models.getMarca());
                             }
-                            updateModelo(models);
+                            Toast.makeText(getApplicationContext(), "estoy en el final"  , Toast.LENGTH_LONG).show();
+
+                            models.setConsecutivo(editText_editar_consecutivo.getText().toString());
+                            models.setMarca(editText_editar_marca.getText().toString());
+                            models.setConcepto(editText_editar_concepto.getText().toString());
                         }
                         
 
