@@ -94,7 +94,7 @@ public class EditarActivity extends BaseActivity {
         fab_editar_update_guardar.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                update(models);
+                updateModelo(models);
             }
         });
     }
@@ -149,6 +149,8 @@ public class EditarActivity extends BaseActivity {
                 .addOnCompleteListener(new OnCompleteListener<Void>() {
                     @Override
                     public void onComplete(@NonNull Task<Void> task) {
+                        Toast.makeText(getApplicationContext(), "estoy en la tarea"  , Toast.LENGTH_LONG).show();
+
                         if(task.isSuccessful()){
                             Log.d(TAG,"termino de actualizar");
                         }
