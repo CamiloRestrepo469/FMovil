@@ -48,9 +48,7 @@ public class BaseActivity extends AppCompatActivity {
         mAuth = firebaseConection.ConectionAuth();
         mFirebaseStorage = firebaseConection.ConectionStorage();
         collectionReference = db.collection(COLLECTION_NAME);
-
-
-    }
+        }
     protected void maleSimpleToast(String message, int duration){
         Toast.makeText(this,message,duration).show();
     }
