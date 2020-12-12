@@ -86,7 +86,7 @@ public class EditarActivity extends BaseActivity {
                 editText_editar_consecutivo.setText("No recibimos nada");
 
 
-//            update(models);
+//
         }
 
 
@@ -94,6 +94,7 @@ public class EditarActivity extends BaseActivity {
         fab_editar_update_guardar.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
+                update(models);
                 updateModelo(models);
             }
         });
@@ -125,12 +126,14 @@ public class EditarActivity extends BaseActivity {
                                 editText_editar_concepto.setText(models.getConcepto());
                                 editText_editar_consecutivo.setText(models.getConsecutivo());
                                 editText_editar_marca.setText(models.getMarca());
-                            }
-                            Toast.makeText(getApplicationContext(), "estoy en el final"  , Toast.LENGTH_LONG).show();
+                            }else {
+                                Toast.makeText(getApplicationContext(), "estoy en el final"  , Toast.LENGTH_LONG).show();
 
-                            models.setConsecutivo(editText_editar_consecutivo.getText().toString());
-                            models.setMarca(editText_editar_marca.getText().toString());
-                            models.setConcepto(editText_editar_concepto.getText().toString());
+                                models.setConsecutivo(editText_editar_consecutivo.getText().toString());
+                                models.setMarca(editText_editar_marca.getText().toString());
+                                models.setConcepto(editText_editar_concepto.getText().toString());
+                            }
+
                         }
                         
 
@@ -140,10 +143,11 @@ public class EditarActivity extends BaseActivity {
 
     }
 
-    private void updateModelo(MovilModels models) {
+    private void updateModelo(final MovilModels models) {
         models.setConsecutivo(editText_editar_consecutivo.getText().toString());
         models.setMarca(editText_editar_marca.getText().toString());
         models.setConcepto(editText_editar_concepto.getText().toString());
+
         documentReference=db.collection(COLLECTION_NAME).document(models.getConsecutivo());
         documentReference.set(models)
                 .addOnCompleteListener(new OnCompleteListener<Void>() {
@@ -152,6 +156,9 @@ public class EditarActivity extends BaseActivity {
                         Toast.makeText(getApplicationContext(), "estoy en la tarea"  , Toast.LENGTH_LONG).show();
 
                         if(task.isSuccessful()){
+                            models.setConsecutivo(editText_editar_consecutivo.getText().toString());
+                            models.setMarca(editText_editar_marca.getText().toString());
+                            models.setConcepto(editText_editar_concepto.getText().toString());
                             Log.d(TAG,"termino de actualizar");
                         }
 
