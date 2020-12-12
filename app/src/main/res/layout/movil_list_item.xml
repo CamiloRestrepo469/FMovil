@@ -31,27 +31,29 @@
         >
 
         <TextView
-            android:id="@+id/tv_movil_list_item_concepto"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:text="Concepto"
-            android:textColor="#0712CC"
-            android:textSize="20sp"/>
-
-        <TextView
             android:id="@+id/tv_movil_list_item_consectivo"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:text="Consecutivo"
             android:textColor="#07CC11"
+            android:textSize="20sp"/>
+
+        <TextView
+            android:id="@+id/tv_movil_list_item_concepto"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Concepto"
+            android:textColor="#0712CC"
             android:textSize="15sp"/>
+
+        
         <TextView
             android:id="@+id/tv_movil_list_item_marca"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:text="Marca"
             android:textColor="#07CC11"
-            android:textSize="5sp"/>
+            android:textSize="7sp"/>
     </LinearLayout>
 
 
