@@ -41,6 +41,7 @@ public class DetalleActivity extends BaseActivity {
         super.init();
         init();
 
+        //• Ver el detalle de un documento
         models= (MovilModels) getIntent().getSerializableExtra("models");
 
         fab_create_update.setOnClickListener(new View.OnClickListener() {

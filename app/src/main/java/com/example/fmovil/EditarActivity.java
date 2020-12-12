@@ -70,6 +70,8 @@ public class EditarActivity extends BaseActivity {
         editText_editar_marca = findViewById(R.id.editText_editar_marca);
         editText_editar_concepto = findViewById(R.id.editText_editar_concepto);
 
+       
+        //• Editar el contenido de un documento.
         models= (MovilModels) getIntent().getSerializableExtra("models");
         Toast.makeText(getApplicationContext(), "voy en el modelo "  , Toast.LENGTH_LONG).show();
             if(models!=null){

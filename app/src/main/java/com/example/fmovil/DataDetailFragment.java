@@ -25,6 +25,7 @@ public class DataDetailFragment extends Fragment {
         // Inflate the layout for this fragment
         return inflater.inflate(R.layout.fragment_data_detail, container, false);
     }
+    //• Ver el detalle de un documento
 
     public void onViewCreated(@NonNull View view, Bundle savedInstanceState) {
         super.onViewCreated(view, savedInstanceState);

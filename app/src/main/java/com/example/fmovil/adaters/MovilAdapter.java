@@ -35,6 +35,7 @@ public class MovilAdapter extends BaseAdapter {
     public long getItemId(int i) {
         return 0;
     }
+    //• Ver el detalle de un documento
 
     @Override
     public View getView(int i, View view, ViewGroup viewGroup) {

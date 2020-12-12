@@ -36,7 +36,7 @@ public class ListActivity extends BaseActivity {
         super.init();
         init();
 
-
+        //• Listarla
         fab_list_create.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
